@@ -1,0 +1,325 @@
+@font-face {
+  font-family: "Actay-Regular";
+  src: url(../fonts/Actay-Regular.otf) format("opentype");
+  font-weight: 400;
+  /* font-style: normal; */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ActayWide-Bold";
+  src: url(../fonts/ActayWide-Bold.otf) format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --main-font: "ActayWide-Bold", sans-serif;
+  --nav-font: system-ui, sans-serif;
+
+  --color1: #1177ca;
+  --color2: #1c1fc2;
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+/* header */
+.navbar {
+  font-family: var(--nav-font) !important;
+}
+
+.text-center-p {
+  font-family: var(--nav-font);
+}
+
+.text-center span {
+  color: var(--color1);
+}
+
+.gradient-card {
+  margin-top: 40px;
+
+  margin-left: 120px;
+
+  background: linear-gradient(135deg, var(--color1), var(--color2));
+  border-radius: 20px;
+  padding: 40px;
+  width: 554px;
+  height: 350px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.gradient-content {
+  width: 60%;
+}
+
+.gradient-content h2 {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: -20px;
+}
+
+.features-list {
+  font-family: var(--nav-font);
+  list-style: none;
+  padding: 0;
+  margin-bottom: 120px;
+  margin-left: -20px;
+}
+
+.features-list li {
+  color: white;
+  position: relative;
+  font-size: 14px;
+}
+
+.buttons-group {
+  display: flex;
+  gap: 10px;
+  margin-left: -20px;
+}
+
+.btn-start {
+  background: transparent;
+  /* color: var(--color1); */
+  color: white;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  width: 610px;
+  height: 41px;
+  border: 1px solid #fff;
+}
+
+.btn-start img {
+  filter: invert(1);
+}
+
+.btn-code {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  width: 460px;
+  height: 41px;
+}
+
+.btn-code:hover {
+  background-color: white;
+  transition: 0.2s ease;
+}
+
+.btn-start:hover {
+  background-color: #fff;
+  transition: 0.2s ease;
+}
+
+.btn-code:hover img {
+  filter: invert(1);
+}
+
+.btn-start:hover img {
+  filter: invert(0);
+}
+
+.btn {
+  font-size: 10px;
+}
+
+.circle-image {
+  width: 291px;
+  height: 277px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  right: 90px;
+  top: 51%;
+  transform: translateY(-50%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+
+  margin-left: -30px;
+}
+
+.action-btn {
+  /* background: #fff; */
+  background: transparent;
+  color: #333;
+  border-radius: 15px;
+  padding: 25px 30px;
+  font-size: 22px;
+  font-weight: 600;
+  width: 394px;
+  height: 94px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #1177ca;
+  transition: all 0.3s;
+}
+
+.action-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 1199px) {
+  .gradient-card {
+    width: 100%;
+    margin-left: 0;
+    padding: 30px;
+  }
+
+  .circle-image {
+    right: 30px;
+    width: 220px;
+    height: 210px;
+  }
+
+  .action-buttons {
+    margin-left: 0;
+  }
+
+  .action-btn {
+    width: 100%;
+    font-size: 24px;
+    padding: 15px 20px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 991px) {
+  .main {
+    padding-top: 30px;
+  }
+
+  .gradient-card {
+    height: auto;
+    padding-bottom: 250px;
+    margin-bottom: 40px;
+  }
+
+  .circle-image {
+    right: 50%;
+    transform: translateX(50%) translateY(50%); 
+    top: auto; 
+    bottom: 0;
+    width: 200px;
+    height: 190px;
+  }
+
+  .gradient-content {
+    width: 100%;
+  }
+
+  .features-list {
+    margin-bottom: 40px;
+  }
+
+  .col-lg-5.ps-5 {
+    padding-left: 15px !important; 
+  }
+
+  .action-btn {
+    font-size: 18px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-brand img {
+    width: 120px;
+  }
+
+  .text-center-p br {
+    display: none;
+  }
+
+  .buttons-group {
+    flex-direction: column;
+  }
+
+  .btn-start,
+  .btn-code {
+    width: 100% !important; 
+    max-width: 250px;
+    margin-bottom: 10px;
+  }
+
+  .circle-image {
+    width: 180px;
+    height: 170px;
+  }
+
+  .action-btn {
+    font-size: 16px;
+    padding: 10px 15px;
+    height: 60px;
+  }
+
+  .action-btn img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 575px) {
+  .gradient-card {
+    padding-bottom: 180px !important;
+    overflow: hidden !important;
+  } 
+
+  .gradient-content {
+    width: 100% !important;
+    padding: 0 15px !important;
+  }
+
+  .gradient-content h2 {
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  .features-list {
+    margin-left: 0;
+    font-size: 12px;
+  }
+
+  .btn-start,
+  .btn-code {
+    font-size: 12px;
+    height: 36px;
+    display: none;
+  }
+
+  .circle-image {
+    width: 150px !important;
+    height: 150px !important;
+    right: 50% !important;
+    left: auto !important;
+    transform: translateX(50%) translateY(50%) !important;
+    bottom: 20px !important;
+    top: auto !important;
+  }
+
+  .action-buttons {
+    gap: 15px;
+  }
+
+  .action-btn {
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
